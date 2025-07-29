@@ -26,7 +26,7 @@ ascii_art=(
 )
 
 nova_versao_disponivel=false
-VERSAO_LOCAL="1.4.1"
+VERSAO_LOCAL="1.4.0"
 
 
 # RETÂNGULO COM A ASCII
