@@ -66,7 +66,7 @@ Caso queira rodar manualmente, use no Termux:
 
 ### 📄 Licença
 
-** GPL-3.0 License** — Consulte o arquivo [LICENSE](https://github.com/devShazan/G-Hub/blob/main/LICENSE) para mais informações.
+**GPL-3.0 License** — Consulte o arquivo [LICENSE](https://github.com/devShazan/G-Hub/blob/main/LICENSE) para mais informações.
 
 
 ---
