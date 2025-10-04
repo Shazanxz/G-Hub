@@ -22,7 +22,7 @@ ascii_art=(
 "| |_| |_____|  _  | |_| | |_) |"
 " \____|     |_| |_|\___/|____/ "
 "                               "
-"     Github Termux Manager"
+"     GitHub Termux Manager"
 )
 
 nova_versao_disponivel=false
@@ -755,11 +755,11 @@ carregamento_dev() {
 
     pad=$(( (term_width - 36) / 2 ))
     printf "%*s" "$pad" ""
-    echo -e "${GREEN}• Desenvolvido por:${NC} ${YELLOW}devShazan${NC}"
+    echo -e "${GREEN}• Desenvolvido por:${NC} ${YELLOW}Shazanx${NC}"
     sleep 0.8
 
     printf "%*s" "$pad" ""
-    echo -e "${GREEN}• Github:${NC} ${RED}https://github.com/devShazan${NC}"
+    echo -e "${GREEN}• Github:${NC} ${RED}https://github.com/Shazanxz${NC}"
     sleep 0.8
 
     printf "%*s" "$pad" ""
