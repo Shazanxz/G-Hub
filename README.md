@@ -57,7 +57,7 @@ Ideal para quem trabalha com desenvolvimento no Android, usando Termux como term
 O próprio menu já instala automaticamente todas as dependências necessárias;
 > Entre elas estão: git, openssh, gh (GitHub CLI), curl, wget, nano, vim, unzip, tar, bash, zsh e outros.
 
-Caso queira rodar manualmente, use no Termux:
+Caso queira rodar manualmente:
 
 ```pkg install -y git openssh gh curl wget nano vim unzip tar bash zsh```
 
