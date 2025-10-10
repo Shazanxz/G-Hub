@@ -26,7 +26,7 @@ ascii_art=(
 )
 
 nova_versao_disponivel=false
-VERSAO_LOCAL="1.4.0"
+VERSAO_LOCAL="1.5.0"
 
 
 # RETÂNGULO COM A ASCII
@@ -61,7 +61,7 @@ ler_versao_local() {
 # ========================
 esperar_enter() {
     echo ""
-    echo -e "${YELLOW}👉 Pressione ENTER para ir ao menu...${NC}"
+    echo -e "${YELLOW}👉 Pressione ENTER para ir...${NC}"
     read
 }
 
@@ -614,7 +614,7 @@ atualizar_menu() {
         read -r resp
         if [[ "$resp" =~ ^[Ss]$ ]]; then
             TMP_FILE=$(mktemp)
-            if curl -fsSL -o "$TMP_FILE" "https://raw.githubusercontent.com/devShazan/G-Hub/main/ghub.sh"; then
+            if curl -fsSL -o "$TMP_FILE" "https://raw.githubusercontent.com/Shazanxz/G-Hub/main/ghub.sh"; then
                 chmod +x "$TMP_FILE"
                 echo -e "${GREEN}• Script baixado com sucesso. Atualizando...${NC}\n"
                 mv "$TMP_FILE" "$0"
@@ -644,7 +644,7 @@ atualizar_menu() {
 # VERIFICAR VERSÃO
 # ========================
 verificar_versao() {
-    remote_version=$(curl -sSfL "https://raw.githubusercontent.com/devShazan/G-Hub/main/version.txt" 2>/dev/null)
+    remote_version=$(curl -sSfL "https://raw.githubusercontent.com/Shazanxz/G-Hub/main/version.txt" 2>/dev/null)
     remote_version=$(echo "$remote_version" | tr -d '\r\n ')
 
     if [[ -z "$remote_version" ]]; then
@@ -670,7 +670,7 @@ mostrar_menu() {
     # centralizar texto versão
     pad_version=$(( (term_width - 12 - ${#VERSAO}) / 2 ))
     printf "%*s" "$pad_version" ""
-    echo -e "Versão: ${GREEN}${VERSAO_LOCAL}${NC}"
+    echo -e "Versão: ${GREEN}${VERSAO_LOCAL}${NC}\n"
 
     if [ "$nova_versao_disponivel" = true ]; then
         pad_update=$(( (term_width - 42) / 2 ))
@@ -755,7 +755,7 @@ carregamento_dev() {
 
     pad=$(( (term_width - 36) / 2 ))
     printf "%*s" "$pad" ""
-    echo -e "${GREEN}• Desenvolvido por:${NC} ${YELLOW}Shazanx${NC}"
+    echo -e "${GREEN}• Desenvolvido por:${NC} ${YELLOW}Shazanxz${NC}"
     sleep 0.8
 
     printf "%*s" "$pad" ""
@@ -785,7 +785,7 @@ carregamento_dev() {
 minicarregamento
 desbloquear_dpkg > /dev/null 2>&1
 atualizar_pacotes 
-instalar_dependencias
+instalar_dependencias #desabilitar para executar mais rapido/vscode
 [[ -f "$ENV_FILE" ]] && source "$ENV_FILE"
 ler_versao_local
 verificar_versao
