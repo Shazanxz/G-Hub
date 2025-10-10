@@ -34,7 +34,7 @@ Ideal para quem trabalha com desenvolvimento no Android, usando Termux como term
 ---
 
 ## 🖼️ Imagem:
-![imagem do menu g-hub](https://i.ibb.co/HLm3FCPR/IMG-20250722-112935.jpg)
+[![Code-x-DCgjcxy-PZ.png](https://i.postimg.cc/CxDsDcTP/Code-x-DCgjcxy-PZ.png)](https://postimg.cc/DSvG3dzL)
 
 ---
 
