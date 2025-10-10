@@ -44,7 +44,7 @@ Ideal para quem trabalha com desenvolvimento no Android, usando Termux como term
 
 ```pkg install git```
 
-```git clone https://github.com/devShazan/G-Hub.git```
+```git clone https://github.com/Shazanxz/G-Hub.git```
 
 ```cd G-Hub```
 
@@ -57,7 +57,7 @@ Ideal para quem trabalha com desenvolvimento no Android, usando Termux como term
 O próprio menu já instala automaticamente todas as dependências necessárias;
 > Entre elas estão: git, openssh, gh (GitHub CLI), curl, wget, nano, vim, unzip, tar, bash, zsh e outros.
 
-Caso queira rodar manualmente, use no Termux:
+Caso queira rodar manualmente:
 
 ```pkg install -y git openssh gh curl wget nano vim unzip tar bash zsh```
 
@@ -73,4 +73,4 @@ Caso queira rodar manualmente, use no Termux:
 
 ### 👨‍💻 Autor
 
-Desenvolvido por © *devShazan* - 2025 | 🇧🇷
+Desenvolvido por © *Shazanxz* - 2025 | 🇧🇷
