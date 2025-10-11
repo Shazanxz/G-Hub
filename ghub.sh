@@ -791,7 +791,7 @@ carregamento_dev() {
 minicarregamento
 desbloquear_dpkg > /dev/null 2>&1
 atualizar_pacotes 
-#instalar_dependencias #desabilitar para executar mais rapido/vscode
+instalar_dependencias #desabilitar para executar mais rapido/vscode
 [[ -f "$ENV_FILE" ]] && source "$ENV_FILE"
 ler_versao_local
 verificar_versao
