@@ -7,6 +7,7 @@ RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 CYAN='\033[0;36m'
+ORANGE='\033[38;5;208m'
 NC='\033[0m'
 ENV_FILE=".env"
 
@@ -271,7 +272,8 @@ configurar_github() {
         echo -e "${YELLOW}• ⚠️ Já existe um .env. Deseja sobrescrever? (s/n)${NC}"
         read -r resp
         if [[ "$resp" != "s" ]]; then
-            echo -e "${GREEN}• 👍 Mantendo a configuração atual.${NC}"
+            clear
+            echo -e "\n${GREEN}• 👍 Mantendo a configuração atual.${NC}\n"
             esperar_enter
             return
         fi
@@ -313,7 +315,7 @@ configurar_github() {
     git config --global user.name "$nome"
     git config --global user.email "$email"
 
-    echo -e "${GREEN}• ✅ GitHub configurado e salvo em $ENV_FILE.${NC}"
+    echo -e "\n${GREEN}• ✅ GitHub configurado e salvo em $ENV_FILE.${NC}\n"
     esperar_enter
 }
 
@@ -534,8 +536,12 @@ mostrar_env_ssh() {
     echo -e "${CYAN}🔍 MOSTRAR .env E CHAVE SSH${NC}"
     minicarregamento
 
-    echo -e "${CYAN}.env:${NC}"
-    cat "$ENV_FILE"
+    if [[ -f "$ENV_FILE" ]]; then
+        echo -e "${CYAN}• Conteúdo do arquivo ${YELLOW}$ENV_FILE${NC}${CYAN}:${NC}\n"
+        cat "$ENV_FILE"
+    else
+        echo -e "${RED}• ❌ Configuração no GitHub não realizada.${NC}"
+    fi
     esperar_enter
 }
 
@@ -551,14 +557,14 @@ checkup() {
 
     printf "\033[1A\033[2K"
 
-    echo -e "${CYAN}• Git:${NC} $(git --version)"
+    echo -e "${CYAN}• Git:${ORANGE} $(git --version)${NC}"
 
     echo -ne "${CYAN}• GitHub CLI:${NC} "
     if command -v gh >/dev/null 2>&1; then
         gh_version=$(gh --version | head -n1)
-        echo -e "${GREEN}${gh_version}${NC}"
+        echo -e "${ORANGE}${gh_version}${NC}"
     else
-        echo -e "${RED}• ❌ GitHub CLI (gh) não está instalado.${NC}"
+        echo -e "${RED}❌ GitHub CLI (gh) não está instalado.${NC}"
         esperar_enter
         return
     fi
@@ -634,7 +640,7 @@ atualizar_menu() {
             echo -e "${YELLOW}• Atualização cancelada. Você continuará vendo que há uma nova versão disponível.${NC}\n"
         fi
     else
-        echo -e "${GREEN}• Você já está com a versão mais recente (${VERSAO_LOCAL}).${NC}\n"
+        echo -e "${GREEN}• Você já está com a versão mais recente:${ORANGE} (${VERSAO_LOCAL})${NC}\n"
     fi
   
     esperar_enter
@@ -759,7 +765,7 @@ carregamento_dev() {
     sleep 0.8
 
     printf "%*s" "$pad" ""
-    echo -e "${GREEN}• Github:${NC} ${RED}https://github.com/Shazanxz${NC}"
+    echo -e "${GREEN}• GitHub:${NC} ${RED}https://github.com/Shazanxz${NC}"
     sleep 0.8
 
     printf "%*s" "$pad" ""
@@ -785,7 +791,7 @@ carregamento_dev() {
 minicarregamento
 desbloquear_dpkg > /dev/null 2>&1
 atualizar_pacotes 
-instalar_dependencias #desabilitar para executar mais rapido/vscode
+#instalar_dependencias #desabilitar para executar mais rapido/vscode
 [[ -f "$ENV_FILE" ]] && source "$ENV_FILE"
 ler_versao_local
 verificar_versao
@@ -798,7 +804,8 @@ carregamento_dev
 while true; do
 
     mostrar_menu
-    read -p "Escolha sua opção: " escolha
+    echo -ne "${YELLOW}Escolha sua opção: ${NC}"
+    read -e -p "" -r escolha
     case $escolha in
         1) configurar_github ;;
         2) criar_repositorio ;;
@@ -809,8 +816,14 @@ while true; do
         7) checkup ;;
         8) atualizar_menu ;;
         0) 
-            echo -e "${GREEN}• 👋 Obrigado por usar! Até mais!${NC}"
-            exit 
+            clear
+            desenhar
+            sleep 1
+            mensagem="👋 Obrigado por usar! Até mais!"
+            pad=$(( (term_width - ${#mensagem}) / 2 ))
+            printf "%*s" "$pad" ""
+            echo -e "${GREEN}${mensagem}${NC}"
+            exit
             ;;
         *) 
             echo -e "${RED}• ❌ Opção inválida!${NC}"
