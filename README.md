@@ -2,8 +2,8 @@
 
 <img 
   align="center" 
-    alt="HTML"
-    title="HTML" 
+    alt="GHub Logo"
+    title="Ghub Logo" 
     width="250px" 
     style="padding-right: 10px;" 
     src="https://iili.io/FOBhYUF.png" alt="logo">
