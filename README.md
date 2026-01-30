@@ -20,8 +20,6 @@
 [![Termux](https://img.shields.io/badge/Termux-%23363636.svg?style=for-the-badge&logoColor=white)](https://github.com/termux/termux-app)
 [![Bash Script](https://img.shields.io/badge/bash_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white)](https://github.com/topics/bash-script)
 
-![License](https://img.shields.io/github/license/Shazanxz/G-Hub.svg)
-
 ![Android](https://img.shields.io/badge/Desenvolvido_Em_Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
 
 </div>
