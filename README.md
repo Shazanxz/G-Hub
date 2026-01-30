@@ -1,7 +1,7 @@
 <div align="center">
 
 <img 
-  align="center" 
+    align="center" 
     alt="GHub Logo"
     title="Ghub Logo" 
     width="250px" 
@@ -14,7 +14,17 @@
 
 **Menu interativo para gerenciamento completo do GitHub no Termux.**
 
----
+<div align="center">
+
+![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+[![Termux](https://img.shields.io/badge/Termux-%23363636.svg?style=for-the-badge&logoColor=white)](https://github.com/termux/termux-app)
+![Bash Script](https://img.shields.io/badge/bash_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white)
+
+![License](https://img.shields.io/github/license/Shazanxz/G-Hub.svg)
+
+![Android](https://img.shields.io/badge/Desenvolvido_Em_Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
+
+</div>
 
 ## 📖 Sobre
 
@@ -70,13 +80,9 @@ Caso queira rodar manualmente:
 
 ---
 
-### 📄 Licença
 
-**GPL-3.0 License** — Consulte o arquivo [LICENSE](https://github.com/devShazan/G-Hub/blob/main/LICENSE) para mais informações.
+<div align="center">
 
+![Dev](https://img.shields.io/badge/Desenvolvido_por:-Shazanxz-ED1C24?style=for-the-badge&logoColor=white)
 
----
-
-### 👨‍💻 Autor
-
-Desenvolvido por © *Shazanxz* - 2025 | 🇧🇷
+</div>
