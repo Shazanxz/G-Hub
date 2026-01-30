@@ -16,9 +16,9 @@
 
 <div align="center">
 
-![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+[![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/)
 [![Termux](https://img.shields.io/badge/Termux-%23363636.svg?style=for-the-badge&logoColor=white)](https://github.com/termux/termux-app)
-![Bash Script](https://img.shields.io/badge/bash_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white)
+[![Bash Script](https://img.shields.io/badge/bash_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white)](https://github.com/topics/bash-script)
 
 ![License](https://img.shields.io/github/license/Shazanxz/G-Hub.svg)
 
