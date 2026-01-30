@@ -4,15 +4,15 @@
     align="center" 
     alt="GHub Logo"
     title="Ghub Logo" 
-    width="250px" 
+    width="300px" 
     style="padding-right: 10px;" 
     src="https://iili.io/FOBhYUF.png" alt="logo">
 
 <h1>G-Hub — GitHub Termux Manager</h1>
 
-</div>
-
 **Menu interativo para gerenciamento completo do GitHub no Termux.**
+
+</div>
 
 <div align="center">
 
