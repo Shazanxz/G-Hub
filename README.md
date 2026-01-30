@@ -1,6 +1,12 @@
 <div align="center">
 
-<img src="https://iili.io/FOBhYUF.png" alt="logo">
+<img 
+  align="center" 
+    alt="HTML"
+    title="HTML" 
+    width="250px" 
+    style="padding-right: 10px;" 
+    src="https://iili.io/FOBhYUF.png" alt="logo">
 
 <h1>G-Hub — GitHub Termux Manager</h1>
 
